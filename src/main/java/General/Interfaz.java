@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package General;
 
 /**
@@ -17,6 +14,7 @@ public class Interfaz extends javax.swing.JFrame {
         initComponents();
     }
 
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,46 +25,75 @@ public class Interfaz extends javax.swing.JFrame {
     private void initComponents() {
 
         Imagen = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
+        txtedad = new javax.swing.JTextField();
+        subtitulo1 = new javax.swing.JLabel();
+        subtitulo2 = new javax.swing.JLabel();
+        CBopcion = new javax.swing.JComboBox<>();
+        titulo = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("general");
+        setMaximumSize(new java.awt.Dimension(700, 500));
+        setPreferredSize(new java.awt.Dimension(700, 500));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vertical-closeup-shot-of-brown-dog.jpg"))); // NOI18N
         getContentPane().add(Imagen);
         Imagen.setBounds(0, 0, 340, 490);
 
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jTextField1.setText("jTextField1");
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(390, 180, 280, 50);
+        txtedad.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        txtedad.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+        txtedad.setToolTipText("");
+        txtedad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtedadActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtedad);
+        txtedad.setBounds(390, 180, 280, 50);
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel2.setText("Ingresa tu edad");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(390, 140, 190, 22);
+        subtitulo1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        subtitulo1.setText("Ingresa tu edad");
+        getContentPane().add(subtitulo1);
+        subtitulo1.setBounds(390, 140, 190, 22);
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel3.setText("Elije una opcion ");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(390, 260, 160, 20);
+        subtitulo2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        subtitulo2.setText("Elije una opcion ");
+        getContentPane().add(subtitulo2);
+        subtitulo2.setBounds(390, 260, 160, 20);
 
-        jComboBox1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(390, 300, 280, 50);
+        CBopcion.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        CBopcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CBopcion.setCursor(new java.awt.Cursor(java.awt.Cursor.SE_RESIZE_CURSOR));
+        CBopcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBopcionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CBopcion);
+        CBopcion.setBounds(390, 300, 280, 50);
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel4.setText("Calcula tu edad si fueras un perro");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(390, 40, 293, 22);
+        titulo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titulo.setText("Calcula tu edad si fueras un perro");
+        titulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(titulo);
+        titulo.setBounds(390, 40, 293, 22);
+        getContentPane().add(Fondo);
+        Fondo.setBounds(0, 0, 700, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CBopcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBopcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CBopcionActionPerformed
+
+    private void txtedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtedadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtedadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,6 +121,7 @@ public class Interfaz extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+       
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -104,11 +132,12 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CBopcion;
+    private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Imagen;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel subtitulo1;
+    private javax.swing.JLabel subtitulo2;
+    private javax.swing.JLabel titulo;
+    private javax.swing.JTextField txtedad;
     // End of variables declaration//GEN-END:variables
 }
