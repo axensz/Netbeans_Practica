@@ -30,6 +30,7 @@ public class Interfaz extends javax.swing.JFrame {
         subtitulo2 = new javax.swing.JLabel();
         CBopcion = new javax.swing.JComboBox<>();
         titulo = new javax.swing.JLabel();
+        btncalcular = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,7 +45,7 @@ public class Interfaz extends javax.swing.JFrame {
         Imagen.setBounds(0, 0, 340, 490);
 
         txtedad.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtedad.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+        txtedad.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtedad.setToolTipText("");
         txtedad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,7 +66,7 @@ public class Interfaz extends javax.swing.JFrame {
         subtitulo2.setBounds(390, 260, 160, 20);
 
         CBopcion.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        CBopcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CBopcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Formula antigua", "Formula Nueva", "Ambas" }));
         CBopcion.setCursor(new java.awt.Cursor(java.awt.Cursor.SE_RESIZE_CURSOR));
         CBopcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,9 +81,18 @@ public class Interfaz extends javax.swing.JFrame {
         titulo.setText("Calcula tu edad si fueras un perro");
         titulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(titulo);
-        titulo.setBounds(390, 40, 293, 22);
+        titulo.setBounds(370, 40, 293, 60);
+
+        btncalcular.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btncalcular.setText("Calcular");
+        btncalcular.setToolTipText("");
+        getContentPane().add(btncalcular);
+        btncalcular.setBounds(440, 390, 150, 40);
+
+        Fondo.setBackground(new java.awt.Color(102, 0, 102));
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9853.jpg"))); // NOI18N
         getContentPane().add(Fondo);
-        Fondo.setBounds(0, 0, 700, 500);
+        Fondo.setBounds(0, 0, 700, 490);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -135,6 +145,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> CBopcion;
     private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Imagen;
+    private javax.swing.JButton btncalcular;
     private javax.swing.JLabel subtitulo1;
     private javax.swing.JLabel subtitulo2;
     private javax.swing.JLabel titulo;
