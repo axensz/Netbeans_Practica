@@ -1,10 +1,9 @@
-
 package General;
 
-/**
- *
- * @author camil
- */
+import javax.swing.JOptionPane;
+
+
+
 public class Interfaz extends javax.swing.JFrame {
 
     /**
@@ -86,6 +85,11 @@ public class Interfaz extends javax.swing.JFrame {
         btncalcular.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btncalcular.setText("Calcular");
         btncalcular.setToolTipText("");
+        btncalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncalcularActionPerformed(evt);
+            }
+        });
         getContentPane().add(btncalcular);
         btncalcular.setBounds(440, 390, 150, 40);
 
@@ -105,9 +109,29 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtedadActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btncalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcularActionPerformed
+        double res, res1 = 0;
+        double edad = Double.parseDouble(txtedad.getText());
+        String opc = CBopcion.getSelectedItem().toString();
+        int opc1 = CBopcion.getSelectedIndex();
+        if (opc1 == 0) {
+            res = edad * 7;
+            } else {
+                if (opc1 == 1) {
+                res = (Math.log(edad) * 16) + 31;
+                } else {
+                    if (opc1 == 2) {
+                    res = edad * 7;
+                    JOptionPane.showMessageDialog(null, "Tienes" + edad + "en años de perro");
+
+                    res1 = (Math.log(edad) * 16) + 31;
+                    JOptionPane.showMessageDialog(null, "Tienes" + edad + "en años de perro");
+                }
+            }
+        }
+    }//GEN-LAST:event_btncalcularActionPerformed
+
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -131,7 +155,7 @@ public class Interfaz extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-       
+ 
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
