@@ -13,7 +13,7 @@
 3. Se mostrará en pantalla la interfaz del editor de texto. Nos moveremos hasta llegar abajo de los asteriscos, ya que en ese lugar debemos poner el comando.
 5. Debemos escribir la hora y día que se repetirá la tarea y el comando que se hará (en este caso cada lunes a las 7 am). Sintaxis:
 ![image](https://user-images.githubusercontent.com/89235206/181645013-726b62c0-6bf5-4de8-bf2f-e40988951464.png) [^3]
-6. Usaremos el comando: ** (* 7 * * 1 find /etc/ -type f –mtime -7 > /home/usuario/resultado.txt)** y utilizaremos el re direccionamiento hacia un archivo de texto, ya que el usuario debe leer dicha información.
+6. Usaremos el comando:  **** 7 * * 1 find /etc/ -type f –mtime -7 > /home/usuario/resultado.txt**** y utilizaremos el re direccionamiento hacia un archivo de texto, ya que el usuario debe leer dicha información.
 7. Por ultimo guardaremos el archivo con la combinación de teclas **Ctrl + O** y lo cerraremos con **ctrl + x**.
 
 [^1]: [Crontab](https://geekflare.com/es/crontab-linux-with-real-time-examples-and-tools/).
